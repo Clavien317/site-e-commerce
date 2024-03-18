@@ -1,0 +1,52 @@
+.body
+{
+  text-align: center;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.produit
+{
+  width: 25%;
+  height: 15vw;
+  border: 1px solid black;
+  margin-left: 3%;
+  display: inline-block;
+  margin-top: 2vw;
+  text-align: center;
+}
+
+.produit button
+{
+  width: 60%;
+  height: 2vw;
+  background-color: rgb(18, 46, 208);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+}
+
+.produit a
+{
+  text-decoration: none;
+  color: white;
+}
+
+.produit span
+{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.body form input
+{
+  width: 60%;
+  text-align: center;
+  height: 3vw;
+}
