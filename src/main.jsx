@@ -4,6 +4,7 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import App from './App.jsx'
 import './index.css'
 import './styles/nav.css'
+import './styles/banner.css'
 import Achat from './pages/Achat.jsx'
 
 

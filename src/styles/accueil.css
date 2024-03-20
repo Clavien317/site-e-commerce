@@ -204,9 +204,17 @@
     margin-left: 185px; */
     z-index: 1;
     position: relative;
-    right: 8px;
+    right: -25px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+/* .produits .container .box .img_box:hover .icon */
+.produits .container .box:hover .icon
+{
+    transform: translate(-32px);
 }
 
 .produits .container .box .img_box .icon li
@@ -224,4 +232,33 @@
 {
     background-color: rgb(8, 54, 114);
     color: white;
+}
+
+.produits .container .box .detail
+{
+    margin-top: 10px;
+}
+
+.produits .container .box .detail p
+{
+    color: rgb(95, 90, 90);
+    font-size: 15px;
+}
+
+.produits .container .box .detail h3
+{
+    font-size: 18px;
+    color: black;
+    margin-top: 6px;
+    transition: 0.5s;
+}
+
+.produits .container .box:hover .detail h3
+{
+    color: blue;
+}
+
+.produits .container .box .detail h4
+{
+    color: blue;
 }

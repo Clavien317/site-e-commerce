@@ -1,0 +1,26 @@
+
+.banner
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.banner .container
+{
+    padding: 30px 40px;
+    display: flex;
+    background-color: rgb(35, 35, 232);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.banner .container .detail
+{
+    margin-top: 10%;
+}
+
+.banner .container .img_box img
+{
+    width: 100%;
+    height: 23vw;
+}

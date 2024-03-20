@@ -3,6 +3,7 @@ import { BsCurrencyDollar, BsEye } from 'react-icons/bs'
 import {FiTruck} from "react-icons/fi"
 import liste from "./produits"
 import {AiOutlineHeart, AiOutlineShoppingCart} from "react-icons/ai"
+import Banner from './Banner'
 
 
 
@@ -143,6 +144,8 @@ function Produit() {
                 }
             </div>
         </div>
+
+        <Banner />
     </>
   )
 }
