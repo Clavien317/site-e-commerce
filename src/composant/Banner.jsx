@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsCurrencyDollar } from 'react-icons/bs'
+import { BsArrowRight, BsCurrencyDollar } from 'react-icons/bs'
 
 function Banner() {
   return (
@@ -8,7 +8,10 @@ function Banner() {
             <div className="container">
                 <div className="detail">
                     <h4>Dernier technologie</h4>
-                    <p><BsCurrencyDollar /></p>
+                    <h3>Iphone 14 prox max 2024 tendance</h3>
+                    <p>$ 1000</p>
+                    <br />
+                    <a href="" className='link'>Shop Now <BsArrowRight /></a>
                 </div>
 
                 <div className="img_box">

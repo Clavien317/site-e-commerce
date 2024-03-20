@@ -204,7 +204,7 @@
     margin-left: 185px; */
     z-index: 1;
     position: relative;
-    right: -25px;
+    right: -35px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -214,7 +214,7 @@
 /* .produits .container .box .img_box:hover .icon */
 .produits .container .box:hover .icon
 {
-    transform: translate(-32px);
+    transform: translate(-36px);
 }
 
 .produits .container .box .img_box .icon li
