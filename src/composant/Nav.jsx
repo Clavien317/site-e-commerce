@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {FaTruckMoving} from "react-icons/fa"
 import {AiOutlineHeart} from "react-icons/ai"
 import {BsBagCheck} from "react-icons/bs"
@@ -8,6 +8,7 @@ import {CiLogin, CiLogout} from "react-icons/ci"
 
 
 function Nav() {
+
   return (
     <div>
         <div className="free">
@@ -29,7 +30,7 @@ function Nav() {
                 
                 <div className="second-icon">
                     <a href=""><AiOutlineHeart /></a>
-                    <a href=""><BsBagCheck /></a>
+                    <a href="/card"><BsBagCheck /></a>
                 </div>
             </div>
         </div>
@@ -38,7 +39,7 @@ function Nav() {
         <div id="header">
             <nav>
                 <ul>
-                    <li><a href="">Accueil</a></li>
+                    <li><a href="/">Accueil</a></li>
                     <li><a href="">Produit</a></li>
                     <li><a href="">Apropos</a></li>
                     <li><a href="">Aide</a></li>

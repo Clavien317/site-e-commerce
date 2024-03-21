@@ -4,7 +4,9 @@
 {
     margin-top: 3vw;
     display: flex;
-    margin-bottom: 7vw;
+    background-color: rgb(215, 215, 214);
+    padding-bottom: 4vw;
+    padding-top: 3vw;
 }
 
 .footer .container

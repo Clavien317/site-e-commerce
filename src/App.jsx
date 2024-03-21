@@ -10,7 +10,6 @@ function App() {
     <>
       <Nav />
       <Accueil />
-
       <Footer />
     </>
   );

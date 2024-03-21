@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { BsCurrencyDollar, BsEye } from 'react-icons/bs'
 import {FiTruck} from "react-icons/fi"
+import "../styles/prod.css"
 import liste from "./produits"
-import {AiOutlineHeart, AiOutlineShoppingCart} from "react-icons/ai"
+import {AiOutlineHeart, AiOutlineShoppingCart,AiOutlineCloseCircle} from "react-icons/ai"
 import Banner from './Banner'
+import { useNavigate, useRoutes } from 'react-router-dom'
 
 
 
@@ -12,11 +14,25 @@ function Produit() {
 
     const [prod,setProd] = useState(liste)
     const [detail,setDetail] = useState([])
+    const [close,setClose] = useState(false)
+    // const [card,setCard] = useState([])
+    const history = useNavigate()
+
+
+    // const addToCart = (produit) => {
+    //     setCard([...card, produit]);
+
+    //   };
+
+
+      const goToCartPage = (prod) => {
+        history('/card', { state: { produit: prod }  });
+      };
 
     const afficheDetail=(produits)=>
     {
         setDetail([produits])
-
+        setClose(true)
         console.log("Voici le prod detail",produits);
     }
 
@@ -124,28 +140,43 @@ function Produit() {
 
 
 
+{
+    close? (
+    <>
         <div className="detail_prod">
-            {
-                detail.map((item)=>
+            <br />
+            <div className="container">
+                <button onClick={()=>setClose(false)} className='close'>x</button>
+
+                <h2>Vous venez de selectionnez ce produit</h2>
+
                 {
-                    return(
-                        <>
-                            <div className="detail">
-                                <div className="img_box">
-                                    <img src={`${item.image}`} alt={item.titre} />
+                    detail.map((item)=>
+                    {
+                        return(
+                            <>
+                                <div className="detail">
+                                    <div className="img_box">
+                                        <img src={`${item.image}`} alt={item.titre} />
+                                    </div>
+                                    
+                                    <div className="info">
+                                        <h3>{item.titre}</h3>
+                                        <h5>{item.categorie}</h5>
+                                        <p>{item.prix}</p>
+                                    </div>
+                                    {/* <button className='add' onClick={()=>addToCart(item)}>Ajouter au pannier</button> */}
+                                    <button className='add' onClick={()=>goToCartPage(item)}>Ajouter au pannier</button>
                                 </div>
-                                
-                                <div className="info">
-                                    <h4>{item.titre}</h4>
-                                    <h5>{item.categorie}</h5>
-                                    <p>{item.prix}</p>
-                                </div>
-                            </div>
-                        </>
-                    )
-                })
-            }
+                            </>
+                        )
+                    })
+                }
+            </div>
         </div>
+    </>):null
+}
+
 
         <div className="produits">
             <h2>Nos meilleurs produits</h2>

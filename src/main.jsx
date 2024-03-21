@@ -6,6 +6,7 @@ import './index.css'
 import './styles/nav.css'
 import './styles/banner.css'
 import Achat from './pages/Achat.jsx'
+import Cart from './composant/Cart.jsx'
 
 
 const router = createBrowserRouter([
@@ -18,8 +19,8 @@ const router = createBrowserRouter([
     element: "404"
   },
   {
-    path:"/:id",
-    element: <Achat />
+    path:"/card",
+    element: <Cart/>
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
