@@ -1,0 +1,28 @@
+
+
+.footer
+{
+    margin-top: 3vw;
+    display: flex;
+    margin-bottom: 7vw;
+}
+
+.footer .container
+{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .container .section
+{
+    width: 30%;
+    margin-left: 6%;
+}
+
+.footer .container .section ul
+{
+    margin-top: 1vw;
+    margin-left: 1.5vw;
+}

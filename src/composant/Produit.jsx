@@ -11,6 +11,14 @@ function Produit() {
 
 
     const [prod,setProd] = useState(liste)
+    const [detail,setDetail] = useState([])
+
+    const afficheDetail=(produits)=>
+    {
+        setDetail([produits])
+
+        console.log("Voici le prod detail",produits);
+    }
 
   return (
     <>
@@ -114,6 +122,31 @@ function Produit() {
             </div>
         </div>
 
+
+
+        <div className="detail_prod">
+            {
+                detail.map((item)=>
+                {
+                    return(
+                        <>
+                            <div className="detail">
+                                <div className="img_box">
+                                    <img src={`${item.image}`} alt={item.titre} />
+                                </div>
+                                
+                                <div className="info">
+                                    <h4>{item.titre}</h4>
+                                    <h5>{item.categorie}</h5>
+                                    <p>{item.prix}</p>
+                                </div>
+                            </div>
+                        </>
+                    )
+                })
+            }
+        </div>
+
         <div className="produits">
             <h2>Nos meilleurs produits</h2>
             <hr className='line' />
@@ -129,7 +162,7 @@ function Produit() {
                                         <img src={item.image} alt="" />
                                         <div className="icon">
                                             <li><AiOutlineShoppingCart /></li>
-                                            <li><BsEye /></li>
+                                            <li onClick={()=>afficheDetail(item)}><BsEye /></li>
                                             <li><AiOutlineHeart /></li>
                                         </div>
                                     </div>
